@@ -9,7 +9,3 @@ logging:
     com.netflix.discovery: 'OFF'
     org.springframework.cloud: 'DEBUG'
 
-spring:
-  application:
-    name: pc-acp-dss
-
