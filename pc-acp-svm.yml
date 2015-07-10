@@ -13,7 +13,7 @@ zuul:
   ignoredServices: "*"
   routes:
     pc-composite-api:
-      path: /pc-composite-api/**
+      path: /api/**
 
 server:
   port: 8765
