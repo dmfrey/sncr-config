@@ -10,7 +10,7 @@ endpoints:
     enabled: true
 
 server:
-  port: 8989
+  port: 8988
 
 management:
   port: 8990

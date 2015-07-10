@@ -12,7 +12,7 @@ endpoints:
 zuul:
   ignoredServices: "*"
   routes:
-    api:
+    pc-composite-api:
       path: /pc-composite-api/**
 
 server:
