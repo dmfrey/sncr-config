@@ -1,31 +1,19 @@
 info:
-  component: Metrics Monitor Turbine
-
-PREFIX:
-
-endpoints:
-  restart:
-    enabled: true
-  shutdown:
-    enabled: true
+  component: SAL Application
 
 server:
-  port: 8989
-
-management:
-  port: 8990
+  port: 0
 
 logging:
   level:
     ROOT: INFO
     com.netflix.discovery: 'OFF'
     org.springframework.cloud: 'DEBUG'
-    # org.springframework.integration: DEBUG
+    org.springframework.web: 'DEBUG'
 
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
   client:
     registryFetchIntervalSeconds: 5
-
 
