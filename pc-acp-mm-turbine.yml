@@ -9,6 +9,11 @@ endpoints:
   shutdown:
     enabled: true
 
+server:
+  port: 8990
+turbine:
+  amqp:
+    port: 8989
 #server:
 #  port: 8989
 
