@@ -1,3 +1,6 @@
 info:
   component: SAL Application
 
+server:
+  port: 0
+

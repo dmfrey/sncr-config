@@ -1,3 +1,6 @@
 info:
   component: DV Application
 
+server:
+  port: 0
+

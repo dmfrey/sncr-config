@@ -1,3 +1,6 @@
 info:
   component: PC API Application
 
+server:
+  port: 0
+
