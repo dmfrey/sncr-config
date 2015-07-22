@@ -1,27 +1,3 @@
 info:
   component: PC API Application
 
-endpoints:
-  restart:
-    enabled: true
-  shutdown:
-    enabled: true
-  health:
-    sensitive: false
-
-server:
-  port: 0
-
-logging:
-  level:
-    ROOT: INFO
-    com.netflix.discovery: 'OFF'
-    org.springframework.cloud: 'DEBUG'
-    org.springframework.web: 'DEBUG'
-
-eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 10
-  client:
-    registryFetchIntervalSeconds: 5
-
