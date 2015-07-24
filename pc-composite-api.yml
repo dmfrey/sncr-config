@@ -1,6 +1,9 @@
 info:
-  component: PC API Application, updated
+  component: PC API Application
 
 server:
   port: 0
+
+message:
+  hello: hello from api application
 
