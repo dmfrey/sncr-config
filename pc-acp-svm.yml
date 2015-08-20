@@ -14,12 +14,12 @@ zuul:
   routes:
     pc-composite-api:
       path: /api/**
-    pc-core-dv:
-      path: /dv/**
-    pc-core-osg:
-      path: /osg/**
-    pc-core-sal:
-      path: /sal/**
+#    pc-core-dv:
+#      path: /dv/**
+#    pc-core-osg:
+#      path: /osg/**
+#    pc-core-sal:
+#      path: /sal/**
 
 server:
   port: 8765
