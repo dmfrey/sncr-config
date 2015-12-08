@@ -33,10 +33,6 @@ logging:
 ---
 spring:
   profiles: cloud
-eureka:
-  instance:
-    hostname: ${APPLICATION_DOMAIN}
-    nonSecurePort: 80
 
 ---
 # For deployment in Docker containers
