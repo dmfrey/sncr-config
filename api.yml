@@ -1,8 +1,8 @@
 info:
-  component: PC API Application
+  component: Resource API
 
 server:
-  port: 0
+  port: 9000
 
 message:
   hello: hello from api application
