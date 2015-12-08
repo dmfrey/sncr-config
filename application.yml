@@ -16,11 +16,6 @@ spring:
     username: ${vcap.services.cloudbus-amqp.connection.username}
     password: ${vcap.services.cloudbus-amqp.connection.password}
     
-eureka:
-  instance:
-    hostname: ${APPLICATION_DOMAIN}
-    nonSecurePort: 80
-
 ---
 # For deployment in Docker containers
 spring:
