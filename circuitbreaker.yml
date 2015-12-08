@@ -1,0 +1,35 @@
+info:
+  component: Hystrix Circuit Breaker
+
+server:
+  port: ${vcap.application.port:7979}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.pc-acp-dss.credentials.uri:http://127.0.0.1:8761}/eureka/
+
+---
+spring:
+  profiles: cloud
+eureka:
+  instance:
+    hostname: ${APPLICATION_DOMAIN}
+    nonSecurePort: 80
+
+---
+# For deployment in Docker containers
+spring:
+  profiles: docker
+  rabbitmq:
+    host: rabbitmq
+
+server:
+  port: 7979
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
