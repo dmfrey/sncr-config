@@ -12,7 +12,9 @@ eureka:
 spring:
   profiles: cloud
   rabbitmq:
-    host: ${vcap.services.cloudbus-amqp.credentials.uri}
+    host: ${vcap.services.cloudbus-amqp.connection.uri}
+    username: ${vcap.services.cloudbus-amqp.connection.username}
+    password: ${vcap.services.cloudbus-amqp.connection.password}
     
 eureka:
   instance:
