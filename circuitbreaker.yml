@@ -4,14 +4,11 @@ info:
 server:
   port: ${vcap.application.port:7979}
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${vcap.services.pc-acp-dss.credentials.uri:http://127.0.0.1:8761}/eureka/
-
 ---
+# For deployment in Cloud Foundry
 spring:
   profiles: cloud
+
 eureka:
   instance:
     hostname: ${APPLICATION_DOMAIN}
