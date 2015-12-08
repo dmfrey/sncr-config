@@ -1,5 +1,5 @@
 info:
-  component: Service Manager
+  component: Service API
 
 endpoints:
   restart:
@@ -12,7 +12,7 @@ endpoints:
 zuul:
   ignoredServices: "*"
   routes:
-    pc-composite-api:
+    api:
       path: /api/**
 #    pc-core-dv:
 #      path: /dv/**
