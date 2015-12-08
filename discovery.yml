@@ -1,0 +1,19 @@
+info:
+  component: Discovery Server
+
+server:
+  port: ${vcap.application.port:8761}
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+
+---
+# For deployment in Docker containers
+spring:
+  profiles: docker
+  rabbitmq:
+    host: rabbitmq
