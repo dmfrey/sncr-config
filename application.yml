@@ -8,9 +8,12 @@ eureka:
       defaultZone: ${vcap.services.discovery.credentials.uri:http://127.0.0.1:8761}/eureka/
 
 ---
+# For deployment in Cloud Foundary
 spring:
   profiles: cloud
-
+  rabbitmq:
+    host: ${vcap.services.cloudbus-amqp.credentials.uri}
+    
 eureka:
   instance:
     hostname: ${APPLICATION_DOMAIN}
