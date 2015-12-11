@@ -15,7 +15,10 @@ spring:
     host: ${vcap.services.cloudbus-amqp.connection.uri}
     username: ${vcap.services.cloudbus-amqp.connection.username}
     password: ${vcap.services.cloudbus-amqp.connection.password}
-    
+
+server:
+  port: 8080
+  
 ---
 # For deployment in Docker containers
 spring:
