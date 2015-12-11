@@ -2,8 +2,15 @@ info:
   component: Hystrix Turbine Monitor
 
 server:
-  port: ${vcap.application.port:8990}
+  port: ${PORT:8989}
 
+---
+spring:
+  profiles: cloud
+
+management:
+  port: -1
+  
 ---
 # For deployment in Docker containers
 spring:
