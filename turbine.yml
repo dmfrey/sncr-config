@@ -8,15 +8,6 @@ turbine:
     port: 8989
 
 ---
-spring:
-  profiles: cloud
-
-eureka:
-  instance:
-    hostname: ${APPLICATION_DOMAIN}
-    nonSecurePort: 80
-
----
 # For deployment in Docker containers
 spring:
   profiles: docker
