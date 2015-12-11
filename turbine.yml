@@ -3,9 +3,6 @@ info:
 
 server:
   port: ${vcap.application.port:8990}
-turbine:
-  stream:
-    port: 8989
 
 ---
 # For deployment in Docker containers
