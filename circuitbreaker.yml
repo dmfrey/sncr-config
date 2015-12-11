@@ -5,11 +5,6 @@ server:
   port: ${vcap.application.port:7979}
 
 ---
-# For deployment in Cloud Foundry
-spring:
-  profiles: cloud
-
----
 # For deployment in Docker containers
 spring:
   profiles: docker
