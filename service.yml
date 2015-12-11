@@ -31,10 +31,6 @@ logging:
     org.springframework.cloud: 'DEBUG'
 
 ---
-spring:
-  profiles: cloud
-
----
 # For deployment in Docker containers
 spring:
   profiles: docker
