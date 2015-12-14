@@ -2,14 +2,8 @@ info:
   component: Hystrix Turbine Monitor
 
 server:
-  port: ${PORT:8080}
+  port: ${PORT:8990}
 
-management:
-  port: 8990
-
----
-spring:
-  profiles: cloud
-
-management:
-  port: -1
+turbine:
+  stream:
+    port: 8989
