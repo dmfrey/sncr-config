@@ -1,6 +1,9 @@
 info:
   component: Service API
 
+server:
+  port: ${PORT:8765}
+
 endpoints:
   restart:
     enabled: true
@@ -14,32 +17,9 @@ zuul:
   routes:
     api:
       path: /api/**
-#    pc-core-dv:
-#      path: /dv/**
-#    pc-core-osg:
-#      path: /osg/**
-#    pc-core-sal:
-#      path: /sal/**
-
-server:
-  port: 8765
 
 logging:
   level:
     ROOT: INFO
     com.netflix.discovery: 'OFF'
     org.springframework.cloud: 'DEBUG'
-
----
-# For deployment in Docker containers
-spring:
-  profiles: docker
-  rabbitmq:
-    host: rabbitmq
-
-eureka:
-  instance:
-    preferIpAddress: true
-  client:
-    serviceUrl:
-      defaultZone: http://discovery:8761/eureka/

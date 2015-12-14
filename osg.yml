@@ -2,7 +2,7 @@ info:
   component: OSG Application
 
 server:
-  port: 0
+  port: ${PORT:0}
 
 message:
   hello: hello from osg application

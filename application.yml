@@ -31,9 +31,6 @@ spring:
   rabbitmq:
     host: rabbitmq
 
-server:
-  port: 8080
-
 eureka:
   instance:
     preferIpAddress: true

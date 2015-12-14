@@ -2,7 +2,7 @@ info:
   component: Resource API
 
 server:
-  port: 9000
+  port: ${PORT:9000}
 
 message:
   hello: hello from api application

@@ -2,21 +2,4 @@ info:
   component: Hystrix Circuit Breaker
 
 server:
-  port: ${vcap.application.port:7979}
-
----
-# For deployment in Docker containers
-spring:
-  profiles: docker
-  rabbitmq:
-    host: rabbitmq
-
-server:
-  port: 7979
-
-eureka:
-  instance:
-    preferIpAddress: true
-  client:
-    serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
+  port: ${PORT:7979}

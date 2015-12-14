@@ -2,7 +2,7 @@ info:
   component: DV Application
 
 server:
-  port: 0
+  port: ${PORT:0}
 
 message:
   hello: hello from dv application
