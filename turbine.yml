@@ -2,11 +2,11 @@ info:
   component: Hystrix Turbine Monitor
 
 server:
-  port: ${PORT:8990}
+  port: ${PORT:8989}
 
 turbine:
   stream:
-    port: 8989
+    port: 8990
 
 ---
 spring:
