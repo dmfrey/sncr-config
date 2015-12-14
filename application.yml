@@ -16,9 +16,6 @@ spring:
     username: ${vcap.services.cloudbus-amqp.connection.username}
     password: ${vcap.services.cloudbus-amqp.connection.password}
 
-server:
-  port: 8080
-  
 eureka:
   instance:
     hostname: ${vcap.application.uris[0]}
