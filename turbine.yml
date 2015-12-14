@@ -2,7 +2,7 @@ info:
   component: Hystrix Turbine Monitor
 
 server:
-  port: ${PORT:8989}
+  port: ${PORT:8080}
 
 management:
   port: 8990
