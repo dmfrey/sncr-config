@@ -6,12 +6,4 @@ server:
 
 message:
   hello: hello from api application
-
----
-spring:
-  profiles: cloud
-  
-eureka:
-  instance:
-    preferIpAddress: true
   

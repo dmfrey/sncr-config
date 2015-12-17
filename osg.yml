@@ -6,12 +6,3 @@ server:
 
 message:
   hello: hello from osg application
-
----
-spring:
-  profiles: cloud
-  
-eureka:
-  instance:
-    preferIpAddress: true
-
