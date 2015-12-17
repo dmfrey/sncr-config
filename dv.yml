@@ -7,3 +7,11 @@ server:
 message:
   hello: hello from dv application
 
+---
+spring:
+  profiles: cloud
+  
+eureka:
+  instance:
+    preferIpAddress: true
+
