@@ -1,11 +1,13 @@
-#eureka:
-#  instance:
-#    leaseRenewalIntervalInSeconds: 10
-#    metadataMap:
-#      instanceId: ${vcap.application.instance_id:${spring.application.name}:${server.port:8080}}
-#  client:
-#    serviceUrl:
-#      defaultZone: ${vcap.services.discovery.credentials.uri:http://127.0.0.1:8761}/eureka/
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 3
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${random.value}}}
+  client:
+    # Default values comes from org.springframework.cloud.netflix.eureka.EurekaClientConfigBean
+    registryFetchIntervalSeconds: 5
+    instanceInfoReplicationIntervalSeconds: 5
+    initialInstanceInfoReplicationIntervalSeconds: 5
 
 ---
 # For deployment in Cloud Foundary
@@ -18,9 +20,11 @@ spring:
 
 eureka:
   instance:
-    prefer-ip-address: true
-    hostname: ${vcap.application.uris[0]}
-    non-secure-port: 80
+    hostname: ${vcap.application.uris[0]:localhost}
+    nonSecurePort: 80
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.discovery.credentials.uri:http://127.0.0.1:8761}/eureka/
     
 ---
 # For deployment in Docker containers
@@ -31,8 +35,4 @@ spring:
 
 eureka:
   instance:
-    prefer-ip-address: true
-#  client:
-#    serviceUrl:
-#      defaultZone: http://discovery:8761/eureka/
-
+    preferIpAddress: true
