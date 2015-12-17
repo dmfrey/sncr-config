@@ -18,9 +18,9 @@ spring:
 
 eureka:
   instance:
-    preferIpAddress: true
-#    hostname: ${vcap.application.uris[0]}
-#    nonSecurePort: 80
+    prefer-ip-address: true
+    hostname: ${vcap.application.uris[0]}
+    non-secure-port: 80
     
 ---
 # For deployment in Docker containers
@@ -31,7 +31,7 @@ spring:
 
 eureka:
   instance:
-    preferIpAddress: true
+    prefer-ip-address: true
 #  client:
 #    serviceUrl:
 #      defaultZone: http://discovery:8761/eureka/
